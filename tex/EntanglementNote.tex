@@ -1,0 +1,326 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{doi}
+
+\setlength{\emergencystretch}{2em}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Heis}{\mathrm{Heis}}
+\newcommand{\Cay}{\mathrm{Cay}}
+\newcommand{\Sent}{S_{\mathrm{ent}}}
+\newcommand{\rpair}{r_{\mathrm{pair}}}
+\newcommand{\spair}{\sigma^{\mathrm{can}}_{\mathrm{pair}}}
+\newcommand{\Rset}{\mathcal{R}}
+
+\title{Residual-Rank Entanglement of Conjugate Weil Pairs\\
+in the Spectral Admissibility Cascade}
+\author{J\'er\^ome Beau}
+\date{June 2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    We compute the entanglement entropy of a closed conjugate Weil pair $\{c,q-c\}$ along the spectral
+    admissibility cascade of the Cosmochrony programme, where entanglement is the infra-projectable
+    invariant of a non-decomposable joint fibre of the non-injective projection.
+    The bipartite state lives on the residual fibre-level support of the Gram--Schmidt span of Weil
+    fingerprints on the Heisenberg Cayley graph.
+    We show that the normalized admissibility residual of each newly admitted independent direction equals
+    unity in the tested finite-$q$ runs: the admitted Weil fingerprints are mutually orthogonal, so the
+    reduced Schmidt spectrum is flat and the reduced entropy is exactly $\Sent(n)=\log \rpair(n)$, the
+    logarithm of the residual Gram--Schmidt rank.
+    No Born--Infeld spectral correction survives: the admissibility-weight deficit is identically zero.
+    Because the cascade only adjoins independent directions, $\rpair(n)$ is non-increasing structurally,
+    so the residual conjugate-pair entanglement is maximal at the earliest admissible stage and decreases
+    monotonically as correlated capacity is stabilized into projected structure.
+    The capacity-level statement (non-negativity of the stabilization rate) is established numerically.
+    The remaining finite-$q$ task is to measure the contraction law of $\rpair(n)$ and compare its exponent
+    with the pair-capacity exponent $\delta_{\mathrm{pair}}$.
+  \end{abstract}
+
+  \noindent\textbf{Keywords:}
+  non-injective projection;
+  Weil representation;
+  Heisenberg group;
+  entanglement entropy;
+  spectral admissibility;
+  conjugate pairs;
+  Schmidt rank;
+  Born--Infeld parity.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+  \section{Introduction}
+    \label{sec:intro}
+
+    The Cosmochrony programme reconstructs physical structure from admissibility constraints on non-injective
+    projections on the Heisenberg group $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, with the non-injective projection
+    $\Pi$ as the primitive of physical description~\cite{Cosmochrony,Beau2026m,Beau2026l}.
+    Within this programme, entanglement is not an added postulate.
+    It is the infra-projectable invariant of a non-decomposable joint fibre of $\Pi$: two degrees of freedom
+    that share a single resolution cell of $\Pi$ cannot be assigned separate projected descriptions, and the
+    correlation between them is exactly the part of the joint fibre that $\Pi$ cannot split.
+    The same non-injective mechanism already yields the violation of Bell factorisation and the Tsirelson
+    bound from the projection-fibre geometry~\cite{Beau2026b}, and the phase-coherent correlations of the
+    quantum sector from the failure of factorisation under admissibility~\cite{Beau2026q1,Beau2026HeisenbergStructure}.
+
+    What has been missing is a quantitative location of entanglement \emph{within} the spectral admissibility
+    cascade itself: given the conjugate Weil structure that organises the cascade, how much entanglement does a
+    conjugate pair carry, and how does it evolve as the cascade resolves?
+    This note answers that question for a single closed conjugate pair $\{c,q-c\}$.
+
+    The result is structurally simple.
+    The reduced state of the pair, restricted to the residual fibre-level support of the Gram--Schmidt span of
+    Weil fingerprints, has a flat Schmidt spectrum, because the admitted fingerprint directions are mutually
+    orthogonal.
+    Hence the reduced entropy is exactly the logarithm of the residual rank,
+    \[
+      \Sent(n)=\log \rpair(n),
+    \]
+    with no surviving spectral weighting.
+    This entropy is maximal at the earliest admissible stage and decreases monotonically; the monotonicity is
+    structural, following from the Gram--Schmidt construction alone.
+    The mass hierarchy of the projected description is then the downstream trace of this stabilization, not an
+    independent input~\cite{Beau2026a4,Beau2026c}.
+
+  \section{Conjugate Weil pairs and the bipartite fibre}
+    \label{sec:pair}
+
+    Let $\rho_c$ denote the Weil representation of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ attached to the central
+    character $c$, acting on $V_c\cong\mathbb{C}^q$.
+    For a nonzero central character $c$, the conjugate character is $q-c$, and the two representations are
+    related by complex conjugation,
+    \[
+      V_{q-c}\cong\overline{V_c},
+    \]
+    so $\{c,q-c\}$ forms a natural pair closed under the Born--Infeld parity involution.
+    Born--Infeld parity forces the admissible fibre of the pair to be equatorial, fixing the eigenvalue ratio
+    of the projected covariance and binding the two characters into a single admissible
+    object~\cite{Beau2026a34,Beau2026a22}.
+
+    The bipartite space at BFS depth $n$ is
+    \[
+      K_{c}(n)=W_c(n)\otimes W_{q-c}(n),
+    \]
+    where $W_c(n)$ is the admissible fibre-level subspace generated by $\rho_c$ up to depth $n$ (made precise in
+    Section~\ref{sec:rank}).
+    We treat the pair as a single closed object.
+
+    \begin{hypothesis}[Closure of the conjugate pair]
+      \label{hyp:closure}
+      The conjugate pair $\{c,q-c\}$ is in a pure joint state on $K_c(n)$, with Schmidt vectors paired
+      diagonally as $e_j\leftrightarrow\overline{e_j}$.
+    \end{hypothesis}
+
+    Hypothesis~\ref{hyp:closure} is not arbitrary: the diagonal pairing is the one selected by the parity
+    involution $V_{q-c}\cong\overline{V_c}$, not an independent assumption about the joint
+    state~\cite{Beau2026a34,Beau2026a21}.
+    It is the precise sense in which a conjugate pair is a closed, infra-projectable object rather than two
+    separately projected fibres.
+    The reduced state of one factor is then well defined, and its entropy is the entanglement of the pair.
+
+  \section{The residual fibre-level rank}
+    \label{sec:rank}
+
+    The cascade observable is the projective capacity of a Weil block.
+    For a generic block with central character $c$, breadth-first search on the Cayley graph
+    $\Cay(\Heis_3(\mathbb{Z}/q\mathbb{Z}),S_q)$ generates, shell by shell, the Weil fingerprint vectors
+    $\rho_c(g)v_0$, and a Gram--Schmidt pass records how many of them are new~\cite{Beau2026a15,Beau2026a16}.
+    Writing $\delta r_n$ for the number of fingerprint vectors in shell $S_n$ that are linearly independent of
+    the span built over shells $0,\dots,n-1$, the per-shell capacity is
+    \[
+      \sigma_c(n)=\frac{\delta r_n}{|S_n|}.
+    \]
+    The conjugate-pair observable is the product
+    $\spair(n)=\sigma_c(n)\,\sigma_{q-c}(n)$, built at the level of the raw cumulative spans so that the
+    residual amplitude factor $r(c,q)$ is treated as a normalization artifact rather than physical
+    content~\cite{Beau2026a21,Beau2026a23}.
+
+    \begin{definition}[Residual fibre-level rank]
+      \label{def:rank}
+      Let $R(n)=\sum_{m\le n}\delta r_m$ be the cumulative Gram--Schmidt span dimension at depth $n$, and let
+      $R_\infty$ be its saturated value.
+      The residual fibre-level rank is
+      \[
+        \rpair(n)=R_\infty-R(n),
+      \]
+      the number of independent admissible directions not yet activated at depth $n$.
+    \end{definition}
+
+    Equivalently, tagging each admitted direction $j$ by its admission depth $m_j$, the residual support is
+    $\Rset_n=\{\,j:m_j>n\,\}$ and $\rpair(n)=|\Rset_n|$.
+    By Hypothesis~\ref{hyp:closure}, $\rpair(n)$ is the Schmidt rank of the conjugate pair at depth $n$ (the
+    pair rank is the smaller of the two conjugate factors, which coincide by parity).
+
+  \section{Reduced entropy: saturation of the rank bound}
+    \label{sec:entropy}
+
+    The admissibility-weight ansatz becomes trivial on the actual Gram--Schmidt data.
+    For each newly admitted Weil fingerprint direction, the normalized residual at the moment of admission
+    satisfies
+    \[
+      w_j=\frac{\|w_j^{\mathrm{GS}}\|}{\|v_j\|}=1
+    \]
+    in the tested finite-$q$ runs.
+    Every admitted direction is thus exactly orthogonal to the previously generated span.
+    This is not imposed by Gram--Schmidt, which would also admit a direction of partial overlap;
+    it is a measured property of the Weil fingerprints, whose distinct images are mutually orthogonal until
+    they become linearly dependent.
+    The admissibility process is therefore binary at the level of independent directions:
+    a fingerprint is orthogonal to the current span and admitted with $w_j=1$, or already contained in it and
+    rejected.
+
+    \begin{proposition}[Flat residual Schmidt spectrum]
+      \label{prop:flat}
+      If the admitted Weil fingerprint directions are mutually orthogonal, the normalized Schmidt weights on the
+      residual support are flat,
+      \[
+        p_j(n)=\frac{1}{\rpair(n)},\qquad j\in\Rset_n,
+      \]
+      and the reduced entropy of the closed conjugate pair is exactly
+      \[
+        \Sent(n)
+        =-\sum_{j\in\Rset_n}\frac{1}{\rpair(n)}\log\frac{1}{\rpair(n)}
+        =\log \rpair(n).
+      \]
+      Equivalently the admissibility-weight deficit vanishes,
+      \[
+        \varepsilon_{\mathrm{adm}}(n):=\log \rpair(n)-\Sent(n)=0.
+      \]
+    \end{proposition}
+
+    This equality is not an additional maximal-entanglement postulate.
+    It follows from the observed orthogonality of the admitted Weil fingerprint directions in the
+    Gram--Schmidt cascade.
+    The identity $w_j=1$ has been verified across $q\in\{29,61,101,151\}$ and multiple generic blocks.
+    An analytic proof of this orthogonality for the full family remains an open strengthening; given the
+    character structure of the Weil fingerprints it is expected to hold for all $q$, but we state it here as a
+    numerically established property.
+
+  \section{Monotonicity of the entanglement profile}
+    \label{sec:monotonicity}
+
+    Since the Gram--Schmidt cascade only adjoins independent directions, $R(n)$ is non-decreasing.
+    Therefore $\rpair(n)=R_\infty-R(n)$ is non-increasing.
+
+    \begin{proposition}[Structural monotonicity]
+      \label{prop:mono}
+      The entanglement entropy $\Sent(n)=\log \rpair(n)$ is monotone non-increasing in $n$.
+      The residual conjugate-pair entanglement is maximal at the earliest admissible stage and decreases as
+      independent fingerprint directions are stabilized into the projected span.
+    \end{proposition}
+
+    This rank monotonicity is structural: it follows from the Gram--Schmidt construction itself, with no
+    numerical input.
+    A separate statement concerns the capacity-level stabilization rate
+    \[
+      \Delta I(n)=\spair(n)-\spair(n+1),
+    \]
+    which measures the rate at which residual correlated capacity is converted into projected stable structure.
+    The non-negativity of $\Delta I(n)$ --- one-way activation at the level of the capacity --- is established
+    numerically in the projective temporal ordering analysis, with no physically meaningful regressions
+    observed; a general analytic proof remains open~\cite{Beau2026pto}.
+    The monotonicity of the entanglement profile does not rely on this capacity-level result: it is already
+    guaranteed by Proposition~\ref{prop:mono}.
+
+  \section{Physical interpretation}
+    \label{sec:interpretation}
+
+    The conjugate-pair entanglement is maximal at the earliest admissible stage, where the residual rank is
+    largest, and it decreases monotonically as the cascade resolves.
+    There is no intermediate maximum: the trajectory is rank-dominated and, under the orthogonality of the
+    admitted fingerprints, rank-determined.
+    The decrease is not a loss of correlation into an environment; it is the conversion of residual correlated
+    capacity into projected stable structure.
+    The projected mass hierarchy is the downstream trace of this stabilization, recorded by the capacity
+    exponent rather than by an independent dynamical input~\cite{Beau2026a4,Beau2026a25,Beau2026c}.
+
+    The interpretation is consistent with the relational reading of time in the programme.
+    A fully infra-projectable invariant has no position in the projected temporal ordering, which is itself the
+    cumulative projected capacity~\cite{Beau2026pto}: it is a single unsplit object below the resolution of
+    $\Pi$, not a pair of separately ordered events.
+    Correlations of this kind therefore carry no signal and admit no influence between separated projected
+    descriptions; locality at the projected level is preserved, in the same way that the non-injective
+    mechanism reproduces the Tsirelson bound without superluminal signalling~\cite{Beau2026b}.
+    Entanglement is, in this sense, the not-yet-time-ordered sector of the cascade.
+
+  \section{Numerical deliverable}
+    \label{sec:deliverable}
+
+    The finite-$q$ calculation reduces to the residual fibre-level rank trajectory:
+    \[
+      \rpair(n),
+      \qquad
+      \Sent(n)=\log \rpair(n),
+      \qquad
+      \Delta I(n)=\spair(n)-\spair(n+1).
+    \]
+    For $q\in\{61,151,211,307\}$, the rank trajectory is reconstructed from the cumulative capacity profiles
+    already produced by the systematic pair campaign~\cite{Beau2026a29}, via
+    $\rpair(n)=R_\infty-\sum_{m\le n}\sigma_c(m)\,|S_m|$, and $\Delta I(n)$ follows directly from the stored
+    $\spair$ profile.
+
+    The task is therefore not to rescue an entropy correction --- there is none --- but to measure the
+    contraction law of $\rpair(n)$, its scaling exponent, and its relation to the pair-capacity exponent
+    $\delta_{\mathrm{pair}}$.
+    If the contraction exponent agrees with $\delta_{\mathrm{pair}}$ within the expected finite-$q$ window, the
+    entanglement trajectory and the capacity law share the same spectral engine.
+    If it differs, the difference marks a genuine separation between residual rank contraction and shell-wise
+    capacity decay.
+
+  \section{Remark on possible non-rank corrections}
+    \label{sec:remark}
+
+    The equality $\Sent(n)=\log \rpair(n)$ uses the native Gram--Schmidt admissibility weights on Weil
+    fingerprint directions, which are uniform.
+    A non-trivial entropy deficit would require an additional weighting structure on the residual support, for
+    example from the projected $\mathfrak{su}(2)$ coordinates of the admissible fibre or from an explicitly
+    diagonalized Laplacian sector~\cite{Beau2026a31,Beau2026a33}.
+    Such a correction would be a distinct modelling choice, defined on a different observable, and is not part
+    of the present fibre-level entanglement calculation.
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    The entanglement of a closed conjugate Weil pair, computed honestly on the spectral admissibility cascade,
+    returns to a pure O-series observable: the logarithm of the residual fibre-level rank.
+    The chain is
+    \[
+      \begin{aligned}
+        &\text{closed conjugate pair}+\text{orthogonal admitted fingerprints}\\
+        &\qquad\Longrightarrow\ \text{flat Schmidt spectrum}\\
+        &\qquad\Longrightarrow\ \Sent(n)=\log \rpair(n),
+      \end{aligned}
+    \]
+    with monotone decrease guaranteed structurally by the Gram--Schmidt construction.
+    No free parameter and no external weight enters.
+
+    The epistemic status is stratified as follows.
+    The reduction $\Sent(n)=\log \rpair(n)$ is derived, conditional on the orthogonality of the admitted
+    fingerprints, which is numerically established for $q\in\{29,61,101,151\}$ and open as a general theorem.
+    The monotonicity of $\Sent$ is structural.
+    The capacity-level one-way activation governing $\Delta I$ is numerically established in the projective
+    temporal ordering analysis, with a general analytic proof open.
+    The purity of the conjugate pair (Hypothesis~\ref{hyp:closure}) rests on the Born--Infeld parity
+    involution and is the standing structural assumption of the construction.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}
