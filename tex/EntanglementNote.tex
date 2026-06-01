@@ -106,7 +106,7 @@ in the Spectral Admissibility Cascade}
     For a nonzero central character $c$, the conjugate character is $q-c$, and the two representations are
     related by complex conjugation,
     \[
-      V_{q-c}\cong\overline{V_c},
+      V_{q-c}\simeq\overline{V_c},
     \]
     so $\{c,q-c\}$ forms a natural pair closed under the Born--Infeld parity involution.
     Born--Infeld parity forces the admissible fibre of the pair to be equatorial, fixing the eigenvalue ratio
@@ -161,6 +161,18 @@ in the Spectral Admissibility Cascade}
       \]
       the number of independent admissible directions not yet activated at depth $n$.
     \end{definition}
+
+    At complete locking $R(n)=R_\infty$, so $\rpair(n)=0$: this is the trivial separable endpoint.
+    Throughout we read the entanglement entropy with the convention
+    \[
+      \Sent(n)=
+      \begin{cases}
+        \log \rpair(n), & \rpair(n)\ge 1,\\
+        0,              & \text{at complete locking,}
+      \end{cases}
+    \]
+    equivalently using the effective rank $\rpair^{\mathrm{eff}}(n)=\max(\rpair(n),1)$, so that the separable
+    endpoint carries zero entanglement.
 
     Equivalently, tagging each admitted direction $j$ by its admission depth $m_j$, the residual support is
     $\Rset_n=\{\,j:m_j>n\,\}$ and $\rpair(n)=|\Rset_n|$.
