@@ -1,5 +1,5 @@
 This repository contains the source of the **Entanglement Presentation Note** Cosmochrony paper  
-[*Residual-Rank Entanglement of Conjugate Weil Pairs in the Spectral Admissibility Cascade*](out/EntanglementNote.pdf).
+*Residual-Rank Entanglement of Conjugate Weil Pairs in the Spectral Admissibility Cascade*.
 
 This note computes the entanglement entropy of a closed conjugate Weil pair
 $\{c,q-c\}$ along the spectral admissibility cascade of the Cosmochrony
