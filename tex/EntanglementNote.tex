@@ -140,12 +140,31 @@ in the Spectral Admissibility Cascade}
       diagonally as $e_j\leftrightarrow\overline{e_j}$.
     \end{hypothesis}
 
-    Hypothesis~\ref{hyp:closure} is not arbitrary: the diagonal pairing is the one selected by the parity
-    involution $V_{q-c}\cong\overline{V_c}$, not an independent assumption about the joint
-    state~\cite{Beau2026a34,Beau2026a21}.
-    It is the precise sense in which a conjugate pair is a closed, infra-projectable object rather than two
-    separately projected fibres.
-    The reduced state of one factor is then well defined, and its entropy is the entanglement of the pair.
+    Hypothesis~\ref{hyp:closure} bundles two separate claims, and only one of them is derived.
+    The bipartite composition $K_c(n) = W_c(n) \otimes W_{q-c}(n)$ and the purity of the joint state on it
+    are a supplied composition structure (a K4 crossing~\cite{Beau2026esub}), not a consequence of
+    admissibility or of the parity involution.
+    What the parity involution $V_{q-c}\cong\overline{V_c}$ does derive, conditional on that supplied
+    purity, is the pairing pattern: among purity-compatible Schmidt pairings, the diagonal one
+    $e_j\leftrightarrow\overline{e_j}$ is the one selected, not an independent choice among possible
+    pairings~\cite{Beau2026a34,Beau2026a21}.
+    Hypothesis~\ref{hyp:closure} is the precise sense in which a conjugate pair is treated as a closed,
+    infra-projectable object rather than two separately projected fibres; within that supplied
+    composition, the reduced state of one factor is then well defined, and its entropy is the
+    entanglement of the pair.
+
+    \begin{remark}[E1 proves orthogonality, not closure]
+      \label{rem:e1-scope}
+      The companion paper E1~\cite{Beau2026ent1} proves the admission-orthogonality identity $w_j=1$ for
+      admitted Weil fingerprint directions, upgrading the numerical hypothesis of this note
+      (Section~\ref{sec:rank}) to a theorem.
+      E1 does not address, and should not be read as establishing, the purity or closure of the
+      conjugate pair's joint state (Hypothesis~\ref{hyp:closure}): the two results concern different
+      objects.
+      E1 concerns the Gram--Schmidt admission structure of a single generic block's fingerprint span,
+      while Hypothesis~\ref{hyp:closure} concerns the bipartite composition and purity of the conjugate
+      pair $\{c,q-c\}$ specifically.
+    \end{remark}
 
   \section{The residual fibre-level rank}
     \label{sec:rank}
@@ -347,8 +366,11 @@ in the Spectral Admissibility Cascade}
     The monotonicity of $\Sent$ is structural.
     The capacity-level one-way activation governing $\Delta I$ is numerically established in the projective
     temporal ordering analysis, with a general analytic proof open.
-    The purity of the conjugate pair (Hypothesis~\ref{hyp:closure}) rests on the Born--Infeld parity
-    involution and is the standing structural assumption of the construction.
+    The purity of the conjugate pair (Hypothesis~\ref{hyp:closure}) is a supplied composition structure
+    (a K4 crossing, Remark~\ref{rem:e1-scope} and Section~\ref{sec:pair}), not a consequence of the
+    Born--Infeld parity involution; the parity involution derives only the diagonal pairing pattern
+    conditional on that supplied purity, and the whole hypothesis remains the standing structural
+    assumption of the construction.
     The entropy computed here is the full residual-rank observable; its separation from the minimal admissible
     pair sector ($\Sent^{\mathrm{adm}}=\log 2$, the Bell--Tsirelson quantity) is treated in~\cite{Beau2026ent2}.
 
