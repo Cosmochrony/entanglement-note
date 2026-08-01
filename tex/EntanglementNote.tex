@@ -153,17 +153,21 @@ in the Spectral Admissibility Cascade}
     composition, the reduced state of one factor is then well defined, and its entropy is the
     entanglement of the pair.
 
-    \begin{remark}[E1 proves orthogonality, not closure]
+    \begin{remark}[Scope of E1's closure result]
       \label{rem:e1-scope}
       The companion paper E1~\cite{Beau2026ent1} proves the admission-orthogonality identity $w_j=1$ for
       admitted Weil fingerprint directions, upgrading the numerical hypothesis of this note
-      (Section~\ref{sec:rank}) to a theorem.
-      E1 does not address, and should not be read as establishing, the purity or closure of the
-      conjugate pair's joint state (Hypothesis~\ref{hyp:closure}): the two results concern different
-      objects.
-      E1 concerns the Gram--Schmidt admission structure of a single generic block's fingerprint span,
-      while Hypothesis~\ref{hyp:closure} concerns the bipartite composition and purity of the conjugate
-      pair $\{c,q-c\}$ specifically.
+      (Section~\ref{sec:rank}) to a theorem, and additionally claims Hypothesis~\ref{hyp:closure} itself
+      as a theorem, but only for matched single-character blocks $(c,0,0)$ and $(q-c,0,0)$: its argument
+      identifies the residual subspaces $V^{(q-c)}_{\mathrm{res}}(n)=\overline{V^{(c)}_{\mathrm{res}}(n)}$
+      from the Fourier-mode structure, then exhibits the maximally entangled state on their tensor
+      product as ``the natural'' choice, rather than deriving purity from a more primitive input.
+      By E1's own scope remark, this matched-block argument does not extend to the independently
+      sampled blocks of the canonical pair observable used throughout this note (general
+      $(c,c_2,c_3)$, $c_2,c_3$ not both zero): the Schmidt-partner pairing is not fixed in that case, and
+      E1 leaves it open.
+      Hypothesis~\ref{hyp:closure}, as used here for the general conjugate pair, therefore remains a
+      supplied composition structure (a K4 crossing) independently of E1's restricted result.
     \end{remark}
 
   \section{The residual fibre-level rank}
