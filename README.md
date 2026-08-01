@@ -52,8 +52,9 @@ conversion of residual correlated capacity into projected stable structure.
 
 | Claim | Status |
 |---|---|
-| Closure of the conjugate pair (purity, diagonal pairing) | Structural (Born--Infeld parity) |
-| Orthogonality of admitted Weil fingerprints ($w_j=1$) | Numerical, verified for $q\in\{29,61,101,151\}$ |
+| Closure of the conjugate pair: bipartite composition and purity | Supplied composition structure (K4 crossing), not derived |
+| Closure of the conjugate pair: diagonal pairing, given purity | Structural (Born--Infeld parity) |
+| Orthogonality of admitted Weil fingerprints ($w_j=1$) | Numerical, verified for $q\in\{29,61,101,151\}$; proved analytically (companion paper E1) |
 | $\Sent(n)=\log r_{\mathrm{pair}}(n)$ | Derived (conditional on orthogonality) |
 | Monotone non-increase of $\Sent(n)$ | Proved (Gram--Schmidt structural) |
 | Capacity-level one-way activation $\Delta I(n)\ge 0$ | Numerical (PTO analysis); analytic proof open |
@@ -99,3 +100,8 @@ bash compile.sh
 
 This runs `pdflatex → bibtex → pdflatex → pdflatex` on
 `tex/EntanglementNote.tex` and produces `out/EntanglementNote.pdf`.
+
+## Citation
+
+> J. Beau, *Residual-Rank Entanglement of Conjugate Weil Pairs in the Spectral Admissibility
+> Cascade*, Zenodo, 2026. DOI: [10.5281/zenodo.20498835](https://doi.org/10.5281/zenodo.20498835).
