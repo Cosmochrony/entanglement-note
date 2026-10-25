@@ -57,7 +57,7 @@ conversion of residual correlated capacity into projected stable structure.
 | Orthogonality of admitted Weil fingerprints ($w_j=1$) | Numerical, verified for $q\in\{29,61,101,151\}$; proved analytically (companion paper E1) |
 | $\Sent(n)=\log r_{\mathrm{pair}}(n)$ | Derived (conditional on orthogonality) |
 | Monotone non-increase of $\Sent(n)$ | Proved (Gram--Schmidt structural) |
-| Capacity-level one-way activation $\Delta I(n)\ge 0$ | Numerical (PTO analysis); analytic proof open |
+| Capacity-level one-way activation $\Delta I(n)\ge 0$ | Conjecture (PTO); supported numerically only within tolerance, $\Delta I(n) \ge -10^{-6} I_{\max}$ after burn-in; analytic proof open |
 
 ## Numerical Deliverable
 
