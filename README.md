@@ -18,7 +18,8 @@ cascade on $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$:
 ## Core Result
 
 The bipartite state lives on the residual fibre-level support of the
-Gram--Schmidt span of Weil fingerprints on the Heisenberg Cayley graph. With
+Gram--Schmidt span of Weil fingerprints on the Heisenberg Cayley graph. Given
+a supplied purity of the joint state (not derived here, nor by E1), and with
 the diagonal Schmidt pairing $e_j\leftrightarrow\overline{e_j}$ selected by the
 Born--Infeld parity involution $V_{q-c}\simeq\overline{V_c}$:
 
