@@ -45,9 +45,12 @@ in the Spectral Admissibility Cascade}
     fingerprints on the Heisenberg Cayley graph.
     We show that the normalized admissibility residual of each newly admitted independent direction equals
     unity: the admitted Weil fingerprints are mutually orthogonal (proved analytically in the companion
-    paper ENT-E1), so, under a supplied purity of the joint state, which neither this note nor ENT-E1
-    derives, the reduced Schmidt spectrum is flat and the reduced entropy is exactly
+    paper ENT-E1), so, under the closure hypothesis of the pair (a supplied purity of the joint state, which
+    neither this note nor ENT-E1 derives, with the diagonal Schmidt pairing, which ENT-E1 proves only for
+    matched blocks given that purity), the reduced Schmidt spectrum is flat and the reduced entropy is exactly
     $\Sent(n)=\log \rpair(n)$, the logarithm of the residual Gram--Schmidt rank.
+    For independently sampled blocks, ENT-E2 records two further conditions: a residual indiscernibility
+    hypothesis and the transfer of an equal-dimension result from its toy model to the pipeline.
     No Born--Infeld spectral correction survives: the admissibility-weight deficit is identically zero.
     Because the cascade only adjoins independent directions, $\rpair(n)$ is non-increasing structurally,
     so the residual conjugate-pair entanglement is maximal at the earliest admissible stage and decreases
@@ -95,8 +98,9 @@ in the Spectral Admissibility Cascade}
     This note answers that question for a single closed conjugate pair $\{c,q-c\}$.
 
     The result is structurally simple.
-    Given a supplied purity of the joint state (Hypothesis~\ref{hyp:closure}), the reduced state of the pair,
-    restricted to the residual fibre-level support of the Gram--Schmidt span of
+    Given the closure hypothesis (Hypothesis~\ref{hyp:closure}: a supplied purity of the joint state with
+    diagonal Schmidt pairing), the reduced state of the pair, restricted to the residual fibre-level support of
+    the Gram--Schmidt span of
     Weil fingerprints, has a flat Schmidt spectrum, because the admitted fingerprint directions are mutually
     orthogonal.
     Hence the reduced entropy is exactly the logarithm of the residual rank,
@@ -169,11 +173,13 @@ in the Spectral Admissibility Cascade}
       \label{rem:e1-scope}
       The companion paper E1~\cite{Beau2026ent1} proves the admission-orthogonality identity $w_j=1$ for
       admitted Weil fingerprint directions, upgrading the numerical hypothesis of this note
-      (Section~\ref{sec:rank}) to a theorem, and additionally claims Hypothesis~\ref{hyp:closure} itself
-      as a theorem, but only for matched single-character blocks $(c,0,0)$ and $(q-c,0,0)$: its argument
+      (Section~\ref{sec:rank}) to a theorem, and additionally proves the pairing clause of
+      Hypothesis~\ref{hyp:closure}, conditional on a supplied purity, but only for matched single-character
+      blocks $(c,0,0)$ and $(q-c,0,0)$: its argument
       identifies the residual subspaces $V^{(q-c)}_{\mathrm{res}}(n)=\overline{V^{(c)}_{\mathrm{res}}(n)}$
       from the Fourier-mode structure, then exhibits the maximally entangled state on their tensor
-      product as ``the natural'' choice, rather than deriving purity from a more primitive input.
+      product as ``the natural'' choice, rather than deriving purity from a more primitive input, and states
+      that the purity clause remains a supplied composition structure.
       By E1's own scope remark, this matched-block argument does not extend to the independently
       sampled blocks of the canonical pair observable used throughout this note: general or mismatched
       blocks $(c,c_2,c_3)$ and $(q-c,c_2',c_3')$, where either factor has $(c_2,c_3)\neq(0,0)$ or the two
@@ -248,6 +254,7 @@ in the Spectral Admissibility Cascade}
 
     \begin{proposition}[Flat residual Schmidt spectrum]
       \label{prop:flat}
+      Assume Hypothesis~\ref{hyp:closure}.
       If the admitted Weil fingerprint directions are mutually orthogonal, the normalized Schmidt weights on the
       residual support are flat,
       \[
@@ -382,8 +389,9 @@ in the Spectral Admissibility Cascade}
     No free parameter and no external weight enters.
 
     The epistemic status is stratified as follows.
-    The reduction $\Sent(n)=\log \rpair(n)$ is derived, conditional on the orthogonality of the admitted
-    fingerprints, which is numerically established for $q\in\{29,61,101,151\}$ and proved analytically in the
+    The reduction $\Sent(n)=\log \rpair(n)$ is derived, conditional on Hypothesis~\ref{hyp:closure} and on the
+    orthogonality of the admitted fingerprints, which is numerically established for $q\in\{29,61,101,151\}$ and
+    proved analytically in the
     companion paper~\cite{Beau2026ent1}.
     The monotonicity of $\Sent$ is structural.
     The capacity-level one-way activation governing $\Delta I$ is a conjecture of the projective temporal
