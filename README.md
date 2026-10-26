@@ -18,7 +18,8 @@ cascade on $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$:
 ## Core Result
 
 The bipartite state lives on the residual fibre-level support of the
-Gram--Schmidt span of Weil fingerprints on the Heisenberg Cayley graph. With
+Gram--Schmidt span of Weil fingerprints on the Heisenberg Cayley graph. Given
+a supplied purity of the joint state (not derived here, nor by E1), and with
 the diagonal Schmidt pairing $e_j\leftrightarrow\overline{e_j}$ selected by the
 Born--Infeld parity involution $V_{q-c}\simeq\overline{V_c}$:
 
@@ -55,7 +56,7 @@ conversion of residual correlated capacity into projected stable structure.
 | Closure of the conjugate pair: bipartite composition and purity | Supplied composition structure (K4 crossing), not derived |
 | Closure of the conjugate pair: diagonal pairing, given purity | Structural (Born--Infeld parity) |
 | Orthogonality of admitted Weil fingerprints ($w_j=1$) | Numerical, verified for $q\in\{29,61,101,151\}$; proved analytically (companion paper E1) |
-| $\Sent(n)=\log r_{\mathrm{pair}}(n)$ | Derived (conditional on orthogonality) |
+| $\Sent(n)=\log r_{\mathrm{pair}}(n)$ | Derived (conditional on orthogonality and on the closure hypothesis: supplied purity with diagonal pairing; for independently sampled blocks E2 adds $[\mathrm{H}_{\mathrm{res}}]$ and the O17 transfer gap) |
 | Monotone non-increase of $\Sent(n)$ | Proved (Gram--Schmidt structural) |
 | Capacity-level one-way activation $\Delta I(n)\ge 0$ | Conjecture (PTO); supported numerically only within tolerance, $\Delta I(n) \ge -10^{-6} I_{\max}$ after burn-in; analytic proof open |
 
