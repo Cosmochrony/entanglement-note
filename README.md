@@ -90,8 +90,8 @@ $\delta_{\mathrm{pair}}$:
 - The conjugate Weil pair, Born--Infeld parity, and the pair-capacity
   observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ are imported from the
   O-series spectral admissibility sub-programme.
-- The projected mass hierarchy is the downstream trace of the cascade
-  stabilization recorded by $\delta_{\mathrm{pair}}$, not an independent input.
+- A connection of cascade stabilization to a projected mass hierarchy is an interpretive proposal.
+  Neither the capacity exponent nor [A-cap] supplies the required map to masses.
 
 ## Build
 
@@ -106,3 +106,6 @@ This runs `pdflatex → bibtex → pdflatex → pdflatex` on
 
 > J. Beau, *Residual-Rank Entanglement of Conjugate Weil Pairs in the Spectral Admissibility
 > Cascade*, Zenodo, 2026. DOI: [10.5281/zenodo.20498835](https://doi.org/10.5281/zenodo.20498835).
+## BI-1 correction candidate
+
+Version 1.4, pending independent review and publication. Removes the attribution of a particle-mass hierarchy to BornInfeld or the capacity exponent. The residual-rank entropy results are unchanged; a map to masses is not supplied.

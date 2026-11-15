@@ -4,5 +4,6 @@
   "publication_type": "workingpaper",
   "main_tex": "tex/EntanglementNote.tex",
   "zenodo_id": 20498835,
-  "doi": "10.5281/zenodo.20498835"
+  "doi": "10.5281/zenodo.20498835",
+  "notes": "Version 1.4. Removes the attribution of a particle-mass hierarchy to BornInfeld or the capacity exponent. The residual-rank entropy results are unchanged; a map to masses is not supplied."
 }
