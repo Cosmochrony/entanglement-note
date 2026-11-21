@@ -108,6 +108,6 @@ This runs `pdflatex → bibtex → pdflatex → pdflatex` on
 > Cascade*, Zenodo, 2026. DOI: [10.5281/zenodo.20498835](https://doi.org/10.5281/zenodo.20498835).
 ## BI-1 correction candidate
 
-Version 1.4.1. The pair-observable paragraph treats any residual factor $r(c,q)$ as a normalisation convention (O17's statement is internal to its toy model; O19's canonical normalisation has open tests; O16 gives $r\equiv1$ on the real pipeline's exact block observable), the pair observable is called the uncorrected product rather than canonical, and the O19 bibliography entry carries its new title.
+Version 1.4.1. The pair-observable paragraph treats any residual factor $r(c,q)$ as a normalisation convention (O17's statement is internal to its toy model; O19's canonical normalisation is not established as pipeline independent; O16 gives $r\equiv1$ on the real pipeline's exact block observable), the pair observable is called the uncorrected product rather than canonical, and the O19 bibliography entry carries its new title.
 
 Version 1.4. Removes the attribution of a particle-mass hierarchy to BornInfeld or the capacity exponent. The residual-rank entropy results are unchanged; a map to masses is not supplied.
