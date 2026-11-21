@@ -5,5 +5,5 @@
   "main_tex": "tex/EntanglementNote.tex",
   "zenodo_id": 20498835,
   "doi": "10.5281/zenodo.20498835",
-  "notes": "Version 1.4. Removes the attribution of a particle-mass hierarchy to BornInfeld or the capacity exponent. The residual-rank entropy results are unchanged; a map to masses is not supplied."
+  "notes": "Version 1.4.1. The pair-observable paragraph treats any residual factor r(c,q) as a normalisation convention: O17's statement is internal to its toy model, O19's canonical normalisation has open tests, and O16 gives r = 1 on the real pipeline within its contract. The bibliography entry for O19 carries its version-1.3 title, 'Canonical Pair Observables in Weil Blocks: The Residual Amplitude Factor and a Proposed Canonical Normalisation with Open Tests'. No other change."
 }
